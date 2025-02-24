@@ -1,0 +1,2 @@
+<?php
+include "displaypost.php";

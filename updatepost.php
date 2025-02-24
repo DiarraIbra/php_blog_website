@@ -73,6 +73,7 @@ if (isset($_POST['submit'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Update Post Page</title>
+    <link rel="stylesheet" href="./allstyle.css">
 </head>
 
 <body>
@@ -81,7 +82,7 @@ if (isset($_POST['submit'])) {
         <textarea name="content" placeholder="Write your post here!" required></textarea><br>
         <select name="category_name">
             <?php while ($row = mysqli_fetch_assoc($result)) { ?>
-            <option value="<?php echo $row['name']; ?>"><?php echo $row['name']; ?></option>
+                <option value="<?php echo $row['name']; ?>"><?php echo $row['name']; ?></option>
             <?php } ?>
         </select><br>
         <input type="file" name="image"><br>
