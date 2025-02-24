@@ -4,7 +4,7 @@
 //     $user_name = $_SESSION['user_name'];
 // }
 include "allheader.php";
-include 'db.php'; // Ensure database connection
+include 'db.php';
 
 $sql = "SELECT * FROM posts";
 $result = mysqli_query($conn, $sql);
@@ -31,6 +31,6 @@ while ($row = mysqli_fetch_assoc($result)) {
     while ($row2 = mysqli_fetch_assoc($result2)) {
         echo "<p><strong>{$row2['user_name']}:</strong> {$row2['comment']}</p>";
     }
-    echo "</div>"; // Close comment-section
-    echo "</div>"; // Close post-container
+    echo "</div>";
+    echo "</div>";
 }
